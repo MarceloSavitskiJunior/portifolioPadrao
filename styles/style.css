@@ -37,6 +37,11 @@ body {
     font-weight: 600;
     color: var(--terciary-color);
     text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cabecalho__menu__link:hover {
+    transform: translateY(-2px);
 }
 
 .apresentacao {
@@ -61,6 +66,20 @@ body {
 
 .titulo {
     color: var(--terciary-color);
+    transition: 0.3s;
+}
+
+.titulo:hover {
+    letter-spacing: 1px;
+}
+
+.titulo__projeto {
+    color: #4B00CC;
+    transition: 0.3s;
+}
+
+.titulo__projeto:hover {
+    letter-spacing: 1px;
 }
 
 .apresentacao__conteudo__paragrafo {
@@ -72,20 +91,15 @@ body {
 
 .botoes {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
-    gap: 32px;
 }
 
 .botao {
     display: flex;
     justify-content: center;
-    gap: 16px;
     text-align: center;
-    border-radius: 8px;
-    border: 2px solid var(--quarta-cor);
-    width: 50%;
     font-size: 1.5rem;
     text-decoration: none;
     padding: 21.5px 0;
@@ -96,7 +110,6 @@ body {
 }
 
 .botoes :hover {
-    background-color: var(--quarta-cor);
     color: var(--hover-color);
 }
 
@@ -106,17 +119,61 @@ body {
     font-size: 1.5rem;
 }
 
+.projetos {
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    background-color: #8E4DFF;
+}
+
+.projetos__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    width: 30vw;
+    height: 70vh;
+    border: 2px solid #4B00CC;
+    border-radius: 10px;
+}
+
 .rodape {
+    position: fixed;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
     color: var(--primary-color);
-    background-color: var(--quarta-cor);
+    background-color: transparent;
     padding: 24px;
     text-align: center;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
 }
 
+@keyframes flutuando {
+    
+    0% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .apresentacao__imagem {
     width: 50%;
+    animation: flutuando ease-in-out 4s infinite;
 }
 
 @media (max-width: 1200px) {
