@@ -128,18 +128,57 @@ body {
     background-color: #8E4DFF;
 }
 
-.projetos__cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+.container_cards {
+    padding: 50px 15vw;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: row; */
+    gap: 40px;
+    width: 50%;
 }
 
 .card {
-    width: 30vw;
-    height: 70vh;
+    font-family: var(--fonte-principal);
+    background-color: #f6f6f6;
+    box-shadow: 0 2px 18px #01010f;
+    width: 40vw;
+    height: 65vh;
     border: 2px solid #4B00CC;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+h2.title {
+    padding: 2vh 0 10px 0;
+    color: #4B00CC;
+}
+
+span.secondText, p.bottomText {
+    padding: 0 0 1vh 0;
+    color: var(--terciary-color);
+    font-family: var(--fonte-secundaria);
+}
+
+.topCard {
+    padding: 2vh 2vw;
+    padding-top: 0;
+}
+
+.bottomCard {
+    padding: 2vh 2vw;
+}
+
+.actions {
+    padding: 1.5vh 0 0 0;
+    background: none;
+    border: none;
+    color: #4B00CC;
+    text-decoration: none;
+}
+
+.mediaCard {
+    background: url(../assets/tela_cadastro.PNG) center/cover;
+    width: 40vw;
+    height: 40vh;
 }
 
 .rodape {
@@ -192,5 +231,45 @@ body {
 
     .apresentacao__conteudo {
         width: auto;
+    }
+
+    .card {
+        height: 80vh;
+    }
+
+    .mediaCard {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 780px) {
+
+    .card {
+        width: 45vw;
+    }
+
+    .mediaCard {
+        height: 40vh;
+        width: 45vw;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .card {
+        width: 45vw;
+    }
+
+    h2.title {
+        font-size: medium;
+    }
+
+    span.secondText, p.bottomText {
+        font-size: small;
+    }
+
+    .mediaCard {
+        height: 40vh;
+        width: 45vw;
     }
 }
